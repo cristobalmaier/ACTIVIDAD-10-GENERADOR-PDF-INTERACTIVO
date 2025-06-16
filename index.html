@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📝 Informe PDF</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Generación de Informe PDF</h1>
+    </header>
+
+    <form id="reportForm">
+        <div class="form-section">
+            <h2>Información Personal</h2>
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" required />
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" min="1" max="120" required />
+
+        </div>
+
+        <div class="form-section">
+            <h2>Información de Contacto</h2>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required />
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="10 dígitos" required />
+        </div>
+
+        <div class="form-section">
+            <h2>Información del Proyecto</h2>
+            <label for="projectName">Nombre del Proyecto:</label>
+            <input type="text" id="projectName" required />
+
+            <label for="projectDate">Fecha del Proyecto:</label>
+            <input type="date" id="projectDate" required />
+
+            <label for="projectDescription">Descripción del Proyecto:</label>
+            <textarea id="projectDescription" rows="4" required></textarea>
+        </div>
+
+        <button type="button" onclick="generateReport()">Generar Informe</button>
+    </form>
+    <div id="reportContainer"></div>
+    <!-- Librería jsPDF desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
