@@ -4,7 +4,6 @@ async function generateReport() {
     // Obtener todos los valores del formulario
     const name = document.getElementById("name").value;
     const age = document.getElementById("age").value;
-    const bloodType = document.getElementById("bloodType").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const projectName = document.getElementById("projectName").value;
@@ -17,7 +16,7 @@ async function generateReport() {
     // Configurar el estilo del título
     doc.setFontSize(20);
     doc.setTextColor(110, 142, 251); // Color azul similar al del formulario
-    doc.text("📋 Informe de Usuario", 105, 20, { align: "center" });
+    doc.text("Informe de Usuario", 105, 20, { align: "center" });
     
     // Configurar el estilo del contenido
     doc.setFontSize(12);
@@ -30,9 +29,8 @@ async function generateReport() {
     
     doc.setFontSize(12);
     doc.setTextColor(51, 51, 51);
-    doc.text("👤 Nombre: " + name, 20, 45);
-    doc.text("🎂 Edad: " + age + " años", 20, 55);
-    doc.text("🩸 Grupo Sanguíneo: " + bloodType, 20, 65);
+    doc.text("Nombre: " + name, 20, 45);
+    doc.text("Edad: " + age + " años", 20, 55);
     
     // Información de Contacto
     doc.setFontSize(14);
@@ -41,8 +39,8 @@ async function generateReport() {
     
     doc.setFontSize(12);
     doc.setTextColor(51, 51, 51);
-    doc.text("📧 Correo Electrónico: " + email, 20, 95);
-    doc.text("📱 Teléfono: " + phone, 20, 105);
+    doc.text("Correo Electrónico: " + email, 20, 95);
+    doc.text("Teléfono: " + phone, 20, 105);
     
     // Información del Proyecto
     doc.setFontSize(14);
@@ -51,8 +49,8 @@ async function generateReport() {
     
     doc.setFontSize(12);
     doc.setTextColor(51, 51, 51);
-    doc.text("📋 Nombre del Proyecto: " + projectName, 20, 135);
-    doc.text("📅 Fecha: " + projectDate, 20, 145);
+    doc.text("Nombre del Proyecto: " + projectName, 20, 135);
+    doc.text("Fecha: " + projectDate, 20, 145);
     
     // Descripción del proyecto (con manejo de texto largo)
     doc.setFontSize(12);
